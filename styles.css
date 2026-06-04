@@ -895,6 +895,56 @@ button {
 .paper-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
 /* ===============================
+   PAPER GROUPS
+   =============================== */
+.paper-group {
+  margin-bottom: 48px;
+}
+
+.paper-group:last-child { margin-bottom: 0; }
+
+.paper-group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.paper-group-header .material-symbols-outlined {
+  color: var(--accent);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.paper-group-header > span:nth-child(2) {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+}
+
+.group-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 100px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.group-link .material-symbols-outlined { font-size: 13px; }
+.group-link:hover { color: var(--accent); border-color: var(--accent-border); }
+
+/* ===============================
    EVENTS
    =============================== */
 .events-grid {
