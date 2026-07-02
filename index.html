@@ -4,110 +4,153 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. İlknur Köseoğlu Sarı — R&D Program Manager</title>
-<meta name="description" content="Dr. İlknur Köseoğlu Sarı — R&D Program Manager bridging frontier physics (CERN, Fermilab, GSI) and enterprise AI. Grant strategy, IP, agentic AI. 7 patent applications, 17 publications. Certified GenAI Leader.">
+<meta name="description" content="Dr. İlknur Köseoğlu Sarı — R&D Program Manager who turns frontier research into funded programs, patents and products. CERN, Fermilab, GSI → enterprise AI. 7 patents, 17 publications, ~6× R&D output. Open to roles & collaborations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff;
-  --ink:#0B0B0C;
-  --muted:#5B6068;
-  --faint:#9CA1AB;
-  --line:#E7E8EC;
-  --line-2:#F0F1F4;
-  --surf:#FBFBFC;
-  --blue:#1A47D9;   /* research channel */
-  --red:#E11A2B;    /* commercialization channel */
-  --blue-soft:#EAEFFC;
-  --red-soft:#FCEBEC;
+  --bg:#ffffff;--ink:#0B0B0C;--muted:#5B6068;--faint:#9CA1AB;
+  --line:#E7E8EC;--line-2:#F0F1F4;--surf:#FBFBFC;
+  --blue:#1A47D9;--red:#E11A2B;--blue-soft:#EAEFFC;--red-soft:#FCEBEC;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{
-  background:var(--bg);color:var(--ink);
-  font-family:"Hanken Grotesk",system-ui,sans-serif;
-  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
+body{background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--blue);color:#fff}
-.mono{font-family:"JetBrains Mono",monospace;font-feature-settings:"ss01"}
+.mono{font-family:"JetBrains Mono",monospace}
 h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;line-height:1.02;letter-spacing:-.02em}
 .wrap{max-width:1060px;margin:0 auto;padding:0 32px}
 section{padding:100px 0;position:relative}
 
-/* eyebrow */
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:80;
+  background:linear-gradient(90deg,var(--blue),var(--red));transition:width .1s linear}
+
 .eyebrow{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:.7em}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--blue);display:inline-block}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--blue)}
 .eyebrow.red::before{background:var(--red)}
 .section-head{margin-bottom:46px;max-width:680px}
 .section-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-top:16px}
 .section-head .lead{color:var(--muted);margin-top:14px;max-width:560px}
 
-/* ---------- nav ---------- */
-header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.82);
+/* nav */
+header{position:fixed;inset:3px 0 auto 0;z-index:60;background:rgba(255,255,255,.82);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1060px;margin:0 auto;padding:0 32px}
-.brand{font-family:"Bricolage Grotesque";font-weight:700;font-size:1rem;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+.brand{font-family:"Bricolage Grotesque";font-weight:700;font-size:1rem;display:flex;align-items:center;gap:9px}
 .brand .mk{width:16px;height:16px;position:relative;flex-shrink:0}
 .brand .mk::before,.brand .mk::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;top:4px}
-.brand .mk::before{left:0;background:var(--blue)}
-.brand .mk::after{right:0;background:var(--red)}
+.brand .mk::before{left:0;background:var(--blue)}.brand .mk::after{right:0;background:var(--red)}
 .navlinks{display:flex;gap:24px;align-items:center}
 .navlinks a{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--muted);position:relative;padding:3px 0;transition:color .18s}
 .navlinks a:hover,.navlinks a.active{color:var(--ink)}
 .navlinks a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red)}
+.nav-cta{font-family:"JetBrains Mono",monospace;font-size:.76rem;color:#fff;background:var(--ink);
+  padding:8px 14px;border-radius:3px;transition:.2s}
+.nav-cta:hover{background:var(--blue)}
 .burger{display:none;background:none;border:none;color:var(--ink);font-size:1.4rem;cursor:pointer;line-height:1}
-@media(max-width:760px){
-  .navlinks{position:fixed;inset:60px 0 auto 0;flex-direction:column;gap:0;background:#fff;
-    border-bottom:1px solid var(--line);padding:6px 0;transform:translateY(-130%);transition:transform .32s;align-items:stretch}
+@media(max-width:820px){
+  .navlinks{position:fixed;inset:63px 0 auto 0;flex-direction:column;gap:0;background:#fff;
+    border-bottom:1px solid var(--line);padding:6px 0;transform:translateY(-140%);transition:transform .32s;align-items:stretch}
   .navlinks.open{transform:translateY(0)}
   .navlinks a{padding:13px 32px;font-size:.9rem}
   .navlinks a.active::after{display:none}
+  .navlinks .nav-cta{margin:8px 32px;text-align:center}
   .burger{display:block}
 }
 
-/* ---------- hero ---------- */
-.hero{padding-top:140px;padding-bottom:80px}
+/* hero */
+.hero{padding-top:130px;padding-bottom:56px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
-.hero h1{font-size:clamp(2.7rem,6.4vw,4.6rem);font-weight:800;margin:18px 0 0;letter-spacing:-.035em}
-.hero .role{font-family:"JetBrains Mono",monospace;font-size:.92rem;margin-top:18px;color:var(--muted)}
-.hero .role b{color:var(--blue);font-weight:500}
-.hero .role i{color:var(--red);font-style:normal;font-weight:500}
-.thesis{font-size:1.18rem;color:var(--ink);margin-top:24px;max-width:520px;line-height:1.5}
-.thesis .b{color:var(--blue);font-weight:600}.thesis .r{color:var(--red);font-weight:600}
-.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
-.btn{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.02em;padding:12px 20px;border:1.5px solid var(--ink);transition:.2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:3px}
+.avail{display:inline-flex;align-items:center;gap:8px;font-family:"JetBrains Mono",monospace;font-size:.72rem;
+  letter-spacing:.04em;color:var(--ink);border:1px solid var(--line);background:var(--surf);
+  padding:6px 12px;border-radius:100px;margin-bottom:20px}
+.avail .pulse{width:8px;height:8px;border-radius:50%;background:var(--red);position:relative}
+.avail .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--red);animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:800;margin:6px 0 0;letter-spacing:-.035em}
+.hero .value{font-family:"Bricolage Grotesque";font-weight:500;font-size:clamp(1.15rem,2.3vw,1.5rem);
+  line-height:1.3;margin-top:20px;max-width:540px;letter-spacing:-.01em}
+.hero .value .b{color:var(--blue)}.hero .value .r{color:var(--red)}
+.hero .sub{font-family:"JetBrains Mono",monospace;font-size:.84rem;color:var(--muted);margin-top:14px}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;align-items:center}
+.btn{font-family:"JetBrains Mono",monospace;font-size:.8rem;letter-spacing:.02em;padding:13px 20px;
+  border:1.5px solid var(--ink);transition:.2s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;border-radius:3px}
 .btn.primary{background:var(--ink);color:#fff}
-.btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+.btn.primary:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
 .btn.ghost:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-txt{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:2px;transition:.2s}
+.btn-txt:hover{color:var(--ink);border-color:var(--ink)}
 
-/* metrics */
-.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:46px;border-top:1px solid var(--line)}
 .metric{padding-top:16px;position:relative}
 .metric::before{content:"";position:absolute;top:-1px;left:0;width:32px;height:2px;background:var(--blue)}
 .metric:nth-child(even)::before{background:var(--red)}
-.metric b{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.85rem;display:block;line-height:1}
-.metric span{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);display:block;margin-top:7px}
+.metric b{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.8rem;display:block;line-height:1}
+.metric span{font-family:"JetBrains Mono",monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);display:block;margin-top:7px}
 
-/* hero diagram */
-.diagram{width:100%}
-.diagram svg{width:100%;height:auto;display:block}
-.trace{fill:none;stroke-width:1.6;stroke-linecap:round}
-.tr-blue{stroke:var(--blue)}.tr-red{stroke:var(--red)}
-@media(max-width:820px){
-  .hero-grid{grid-template-columns:1fr;gap:40px}
-  .diagram{max-width:440px;margin:0 auto}
-}
+/* publication record (real data) */
+.record{border:1px solid var(--line);border-radius:6px;padding:18px 20px 16px;background:#fff;position:relative}
+.record-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.record-head .rt{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.record-head .rs{font-family:"JetBrains Mono",monospace;font-size:.64rem;color:var(--blue);border-bottom:1px solid transparent;transition:.2s}
+.record-head .rs:hover{border-color:var(--blue)}
+.smetrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.sm{border-left:2px solid var(--blue);padding-left:10px}
+.sm:nth-child(2){border-color:var(--red)}
+.sm b{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.5rem;display:block;line-height:1}
+.sm span{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);display:block;margin-top:5px}
+.rarc{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.02em;color:var(--faint);margin:-2px 0 12px;line-height:1.5}
+.tl{position:relative;height:172px;margin:6px 0 2px}
+.tl-axis{position:absolute;left:0;right:0;bottom:26px;height:1px;background:var(--line)}
+.tl-year{position:absolute;bottom:8px;transform:translateX(-50%);font-family:"JetBrains Mono",monospace;font-size:.6rem;color:var(--faint)}
+.tl-era{position:absolute;bottom:150px;transform:translateX(-50%);font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.08em;color:var(--faint);white-space:nowrap}
+.dot{position:absolute;width:11px;height:11px;border-radius:50%;transform:translateX(-50%);cursor:pointer;transition:transform .15s;border:2px solid #fff}
+.dot.phys{background:var(--blue)}
+.dot.ai{background:var(--red)}
+.dot:hover{transform:translateX(-50%) scale(1.5);z-index:5}
+.dot .stem{position:absolute;left:50%;bottom:50%;width:1px;background:var(--line-2);z-index:-1}
+.record-foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line-2);padding-top:10px;margin-top:2px}
+.lg{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono",monospace;font-size:.64rem;color:var(--muted)}
+.lg i{width:8px;height:8px;border-radius:50%}.lg i.blue{background:var(--blue)}.lg i.red{background:var(--red)}
+.rf-stat{font-family:"JetBrains Mono",monospace;font-size:.64rem;color:var(--faint);margin-left:auto}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:#fff;padding:8px 11px;border-radius:5px;
+  font-size:.72rem;line-height:1.35;max-width:230px;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;z-index:20}
+.tip.show{opacity:1;transform:translateY(0)}
+.tip .tv{font-family:"JetBrains Mono",monospace;font-size:.62rem;color:#9fb4ff;margin-top:3px}
+
+.scrollcue{display:flex;align-items:center;gap:10px;margin-top:44px;font-family:"JetBrains Mono",monospace;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.scrollcue .ln{width:1px;height:34px;background:var(--line);position:relative;overflow:hidden}
+.scrollcue .ln::after{content:"";position:absolute;top:-34px;left:0;width:1px;height:34px;background:var(--ink);animation:drop 1.8s ease-in-out infinite}
+@keyframes drop{0%{top:-34px}60%,100%{top:34px}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:36px}.record{max-width:460px;margin:0 auto}.scrollcue{display:none}}
 @media(max-width:540px){.metrics{grid-template-columns:repeat(2,1fr);gap:22px 0}}
 
-/* ---------- about ---------- */
+/* HOOK band */
+.hook{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surf);padding:64px 0}
+.hook-grid{display:grid;grid-template-columns:1fr 1fr auto;gap:40px;align-items:center}
+.hook .lbl{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.hook .cmp{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(2rem,5vw,3.1rem);line-height:1;letter-spacing:-.03em;display:flex;align-items:baseline;gap:14px}
+.hook .cmp .from{color:var(--faint);font-size:.5em;font-weight:700}
+.hook .cmp .arrow{color:var(--line);font-size:.5em}
+.hook .cmp .to.blue{color:var(--blue)}.hook .cmp .to.red{color:var(--red)}
+.hook .cmp .u{font-family:"Hanken Grotesk";font-weight:600;font-size:.28em;color:var(--muted);letter-spacing:0}
+.hook .statement{max-width:220px}
+.hook .statement p{font-size:.92rem;color:var(--muted);margin-bottom:12px}
+.hook .statement a{font-family:"JetBrains Mono",monospace;font-size:.76rem;color:var(--ink);border-bottom:2px solid var(--red);padding-bottom:2px;transition:.2s}
+.hook .statement a:hover{color:var(--red)}
+@media(max-width:820px){.hook-grid{grid-template-columns:1fr 1fr;gap:30px}.hook .statement{grid-column:1/-1;max-width:none}}
+@media(max-width:480px){.hook-grid{grid-template-columns:1fr}}
+
+/* about */
 .about-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:50px;align-items:start}
-.about-grid p{color:var(--muted);margin-bottom:16px}
-.about-grid p b{color:var(--ink);font-weight:600}
+.about-grid p{color:var(--muted);margin-bottom:16px}.about-grid p b{color:var(--ink);font-weight:600}
 .specs{border:1px solid var(--line);border-radius:5px}
 .spec{display:flex;justify-content:space-between;gap:14px;padding:13px 18px;border-bottom:1px solid var(--line-2);font-size:.9rem}
 .spec:last-child{border-bottom:none}
@@ -115,7 +158,14 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.8
 .spec .v{text-align:right;color:var(--ink);font-weight:500}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:30px}}
 
-/* ---------- expertise ---------- */
+/* continue cue */
+.more{margin-top:38px;display:inline-flex;align-items:center;gap:10px;font-family:"JetBrains Mono",monospace;
+  font-size:.78rem;color:var(--ink);transition:.2s}
+.more .a{color:var(--blue);transition:transform .2s}
+.more:hover{color:var(--blue)}.more:hover .a{transform:translateX(5px)}
+.more.red .a{color:var(--red)}.more.red:hover{color:var(--red)}
+
+/* expertise */
 .comp-list{border-top:1px solid var(--line)}
 .comp{display:grid;grid-template-columns:54px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);transition:.2s}
 .comp:hover{padding-left:8px}
@@ -124,17 +174,13 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.8
 .comp h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
 .comp p{color:var(--muted);font-size:.93rem;max-width:640px}
 .comp .tags{margin-top:11px;display:flex;flex-wrap:wrap;gap:7px}
-.tag{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.02em;color:var(--ink);
-  border:1px solid var(--line);padding:4px 9px;border-radius:3px;background:var(--surf)}
+.tag{font-family:"JetBrains Mono",monospace;font-size:.66rem;color:var(--ink);border:1px solid var(--line);padding:4px 9px;border-radius:3px;background:var(--surf)}
 
-/* ---------- experience ---------- */
+/* experience */
 .beam{position:relative;padding-left:30px}
-.beam::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
-  background:linear-gradient(var(--blue),var(--red))}
-.node{position:relative;padding-bottom:38px}
-.node:last-child{padding-bottom:0}
-.node::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;
-  background:#fff;border:2.5px solid var(--blue);box-shadow:0 0 0 4px #fff}
+.beam::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--blue),var(--red))}
+.node{position:relative;padding-bottom:38px}.node:last-child{padding-bottom:0}
+.node::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:#fff;border:2.5px solid var(--blue);box-shadow:0 0 0 4px #fff}
 .node:nth-child(even)::before{border-color:var(--red)}
 .node .yr{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.04em;color:var(--muted)}
 .node h3{font-size:1.18rem;margin:5px 0 2px}
@@ -143,27 +189,35 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.8
 .node p{color:var(--muted);font-size:.92rem;max-width:700px}
 .node .tags{margin-top:11px}
 
-/* ---------- research ---------- */
+/* research */
 .pg{margin-bottom:34px}.pg:last-child{margin-bottom:0}
 .pg .gh{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
-.pg .gh h3{font-size:1.05rem}
-.pg .gh .bar{flex:1;height:1px;background:var(--line)}
+.pg .gh h3{font-size:1.05rem}.pg .gh .bar{flex:1;height:1px;background:var(--line)}
 .pub{display:block;padding:18px 2px;border-bottom:1px solid var(--line-2);transition:.2s}
 .pub:hover{padding-left:8px;border-color:var(--blue)}
-.pub .venue{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.03em;color:var(--red);margin-bottom:5px}
+.pub .venue{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--red);margin-bottom:5px}
 .pub h4{font-family:"Bricolage Grotesque";font-size:1.04rem;font-weight:500;line-height:1.22;margin-bottom:5px}
-.pub .auth{font-size:.84rem;color:var(--muted)}
-.pub .auth b{color:var(--ink)}
+.pub .auth{font-size:.84rem;color:var(--muted)}.pub .auth b{color:var(--ink)}
 .pub .desc{font-size:.84rem;color:var(--muted);margin-top:5px}
 .pub .links{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-.pub .links a,.pub .links span{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--muted);
-  border:1px solid var(--line);padding:4px 9px;border-radius:3px;transition:.18s}
+.pub .links a,.pub .links span{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--muted);border:1px solid var(--line);padding:4px 9px;border-radius:3px;transition:.18s}
 .pub .links a:hover{color:var(--blue);border-color:var(--blue)}
 .viewall{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--muted);margin-top:20px}
-.viewall a{color:var(--blue);border-bottom:1px solid transparent}
-.viewall a:hover{border-color:var(--blue)}
+.viewall a{color:var(--blue);border-bottom:1px solid transparent}.viewall a:hover{border-color:var(--blue)}
+/* collapsible physics foundations */
+.foundations{border:1px solid var(--line);border-radius:6px;margin-top:10px;background:var(--surf);overflow:hidden}
+.foundations>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:18px 20px;transition:background .2s}
+.foundations>summary::-webkit-details-marker{display:none}
+.foundations>summary:hover{background:#fff}
+.fsum{flex:1}
+.ftitle{font-family:"Bricolage Grotesque";font-weight:700;font-size:1.05rem;display:block}
+.fmeta{font-size:.84rem;color:var(--muted);margin-top:5px;display:block;max-width:640px}
+.fchev{font-family:"JetBrains Mono",monospace;color:var(--blue);font-size:.95rem;transition:transform .25s;flex-shrink:0}
+.foundations[open]>summary .fchev{transform:rotate(90deg)}
+.fbody{padding:2px 20px 16px;border-top:1px solid var(--line)}
+.fbody .pg{margin:18px 0 0}
 
-/* ---------- education ---------- */
+/* education */
 .edu-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
 .degree{padding:15px 0;border-bottom:1px solid var(--line-2);display:flex;justify-content:space-between;gap:18px}
 .degree:last-child{border-bottom:none}
@@ -177,27 +231,43 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(255,255,255,.8
 .cert:nth-child(odd) .d{background:var(--red)}
 @media(max-width:760px){.edu-grid{grid-template-columns:1fr;gap:26px}}
 
-/* ---------- contact ---------- */
-#contact .section-head{max-width:560px}
-.clinks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:620px}
-.clink{border:1px solid var(--line);border-radius:5px;padding:16px 20px;transition:.2s;display:flex;flex-direction:column;gap:3px}
-.clink:hover{border-color:var(--blue);transform:translateY(-2px)}
-.clink:nth-child(even):hover{border-color:var(--red)}
-.clink .ck{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
-.clink .cv{font-weight:600;font-size:.94rem}
-@media(max-width:540px){.clinks{grid-template-columns:1fr}}
+/* contact (final CTA) */
+#contact{padding-bottom:150px}
+.contact-card{border:1px solid var(--line);border-radius:8px;padding:48px;background:var(--surf);text-align:center;position:relative;overflow:hidden}
+.contact-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--red))}
+.contact-card h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:16px}
+.contact-card .lead{color:var(--muted);max-width:500px;margin:0 auto 30px}
+.contact-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.clinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+.clink{font-family:"JetBrains Mono",monospace;font-size:.78rem;color:var(--muted);transition:.2s;border-bottom:1px solid transparent;padding-bottom:2px}
+.clink:hover{color:var(--blue);border-color:var(--blue)}
 
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-size:.76rem;font-family:"JetBrains Mono",monospace}
 .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;max-width:1060px;margin:0 auto;padding:0 32px}
 
+/* floating CTA */
+.floatcta{position:fixed;left:50%;bottom:22px;transform:translate(-50%,140%);z-index:70;
+  display:flex;align-items:center;gap:14px;background:var(--ink);color:#fff;padding:10px 12px 10px 20px;
+  border-radius:100px;box-shadow:0 12px 40px -12px rgba(0,0,0,.4);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.floatcta.show{transform:translate(-50%,0)}
+.floatcta .txt{font-family:"JetBrains Mono",monospace;font-size:.76rem;display:flex;align-items:center;gap:8px}
+.floatcta .txt .dot{width:7px;height:7px;border-radius:50%;background:#39d98a;box-shadow:0 0 8px #39d98a}
+.floatcta .fbtn{font-family:"JetBrains Mono",monospace;font-size:.76rem;background:#fff;color:var(--ink);padding:8px 15px;border-radius:100px;transition:.2s;white-space:nowrap}
+.floatcta .fbtn:hover{background:var(--blue);color:#fff}
+.floatcta .fbtn.alt{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}
+.floatcta .fbtn.alt:hover{background:rgba(255,255,255,.12)}
+@media(max-width:600px){.floatcta{left:16px;right:16px;bottom:14px;transform:translateY(140%);justify-content:space-between;padding:9px 9px 9px 16px}
+  .floatcta.show{transform:translateY(0)}.floatcta .txt .label{display:none}.floatcta .fbtn.alt{display:none}}
+
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}
-  .trace{stroke-dasharray:none !important;stroke-dashoffset:0 !important}}
+  .avail .pulse::after,.scrollcue .ln::after{animation:none}}
 :focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:3px}
 </style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
 
 <header>
   <nav class="nav">
@@ -208,7 +278,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
       <a href="#experience">experience</a>
       <a href="#research">research</a>
       <a href="#education">education</a>
-      <a href="#contact">contact</a>
+      <a href="#contact" class="nav-cta">Let's talk →</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu">≡</button>
   </nav>
@@ -219,39 +289,81 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">R&amp;D Program Manager</span>
+        <span class="eyebrow">R&amp;D Program Manager · Certified GenAI Leader</span>
         <h1>Dr. İlknur<br>Köseoğlu Sarı</h1>
-        <p class="role">// <b>Research</b> &nbsp;×&nbsp; <i>Commercialization</i> &nbsp;·&nbsp; Grant strategy · IP · Agentic AI</p>
-        <p class="thesis">I turn frontier research into funded programs and protected products — bridging a decade at <span class="b">CERN, Fermilab &amp; GSI</span> with enterprise <span class="r">AI commercialization</span>.</p>
+        <p class="value">I turn frontier research into <span class="b">funded programs</span>, <span class="r">patents</span> and shipped products.</p>
+        <p class="sub">// A decade across CERN · Fermilab · GSI — now scaling enterprise AI at Kariyer.net.</p>
         <div class="cta">
-          <a href="#research" class="btn primary">View research →</a>
+          <a href="#hook" class="btn primary">See the impact →</a>
           <a href="#contact" class="btn ghost">Get in touch</a>
+          <a href="ilknur-koseoglu-sari-cv.pdf" class="btn-txt" download>Download CV ↓</a>
         </div>
         <div class="metrics">
-          <div class="metric"><b>~6×</b><span>R&amp;D output ↑</span></div>
+          <div class="metric"><b>40+</b><span>Publications</span></div>
           <div class="metric"><b>7</b><span>Patent filings</span></div>
-          <div class="metric"><b>17</b><span>Publications</span></div>
-          <div class="metric"><b>10+</b><span>Years R&amp;D</span></div>
+          <div class="metric"><b>20+</b><span>Projects led</span></div>
+          <div class="metric"><b>100+</b><span>Dev community</span></div>
         </div>
       </div>
-      <div class="diagram" aria-hidden="true">
-        <svg viewBox="0 0 360 300">
-          <line x1="20" y1="250" x2="340" y2="250" stroke="var(--line)" stroke-width="1"/>
-          <line x1="60" y1="40" x2="60" y2="250" stroke="var(--line-2)" stroke-width="1"/>
-          <g class="mono" font-size="9" fill="var(--faint)" font-family="JetBrains Mono">
-            <text x="20" y="270">2015</text>
-            <text x="300" y="270">2026</text>
-          </g>
-          <path class="trace tr-blue" d="M30 240 C 110 235, 150 150, 190 120" pathLength="1"/>
-          <path class="trace tr-red" d="M330 240 C 260 235, 230 160, 190 120" pathLength="1"/>
-          <circle cx="190" cy="120" r="6.5" fill="#fff" stroke="var(--ink)" stroke-width="2"/>
-          <circle cx="190" cy="120" r="2.5" fill="var(--ink)"/>
-          <g font-family="JetBrains Mono" font-size="9.5" font-weight="500">
-            <text x="30" y="228" fill="var(--blue)">RESEARCH</text>
-            <text x="284" y="228" fill="var(--red)" text-anchor="end">COMMERCIAL</text>
-            <text x="190" y="103" fill="var(--ink)" text-anchor="middle" font-size="10">R&amp;D PROGRAM</text>
-          </g>
-        </svg>
+      <div>
+        <div class="record" id="record">
+          <div class="record-head"><span class="rt">Body of Work</span><a class="rs" href="https://scholar.google.com/citations?user=WElH4xgAAAAJ&hl=tr&oi=sra" target="_blank" rel="noopener">Google Scholar ↗</a></div>
+          <div class="smetrics">
+            <div class="sm"><b>10+</b><span>Years R&amp;D</span></div>
+            <div class="sm"><b>6·4</b><span>Inst · Countries</span></div>
+            <div class="sm"><b>GenAI</b><span>Certified · GCP</span></div>
+          </div>
+          <div class="tl" id="tl">
+            <div class="tl-axis"></div>
+            <div class="tl-era" style="left:20%">BIG-SCIENCE R&amp;D</div>
+            <div class="tl-era" style="left:86%">AI / APPLIED</div>
+            <!-- Physics / science (blue) -->
+            <span class="dot phys" style="left:6%;bottom:26px" data-t="Electro-optical properties of carbon-nanotube-doped liquid crystals" data-v="J. Molecular Liquids · 2015"></span>
+            <span class="dot phys" style="left:33%;bottom:26px" data-t="Evidence for the Higgs boson decay to a bottom quark pair (CMS)" data-v="Phys. Lett. B · 2018"></span>
+            <span class="dot phys" style="left:33%;bottom:44px" data-t="Identification of heavy-flavour jets with the CMS detector" data-v="JINST · 2018"></span>
+            <span class="dot phys" style="left:47%;bottom:26px" data-t="Design of the Barrel &amp; Endcap DIRC detectors for PANDA (one of the first authors)" data-v="Int. J. Mod. Phys. A · 2020"></span>
+            <span class="dot phys" style="left:60%;bottom:26px" data-t="PANDA Phase One (PANDA Collaboration)" data-v="Eur. Phys. J. A · 2021"></span>
+            <span class="dot phys" style="left:60%;bottom:44px" data-t="Ph.D. Thesis — Fast Readout for the PANDA Disc DIRC" data-v="U. Giessen · 2021"></span>
+            <!-- AI / applied (red) -->
+            <span class="dot ai" style="left:20%;bottom:44px" data-t="M.Sc. Thesis — Investigating Supersymmetry with Deep-Learning methods" data-v="ITU · 2016 · early ML"></span>
+            <span class="dot ai" style="left:73%;bottom:26px" data-t="Fall Detection &amp; Efficiency Enhancement via Wearable Technology" data-v="IEEE · 2023"></span>
+            <span class="dot ai" style="left:92%;bottom:26px" data-t="Multi-Agent Position Classification — Top-45 demo (w/ Meta, Berkeley)" data-v="ACM · 2026"></span>
+            <span class="dot ai" style="left:92%;bottom:44px" data-t="Tokalator — Context Engineering Toolkit for AI Coding" data-v="arXiv:2604.08290 · 2026"></span>
+            <span class="dot ai" style="left:92%;bottom:62px" data-t="TypoGuard — AI-Powered Typosquatting Detection &amp; Defense" data-v="IEEE ICIN · 2026"></span>
+            <!-- years -->
+            <div class="tl-year" style="left:6%">'15</div>
+            <div class="tl-year" style="left:33%">'18</div>
+            <div class="tl-year" style="left:60%">'21</div>
+            <div class="tl-year" style="left:92%">'26</div>
+          </div>
+          <div class="record-foot">
+            <span class="lg"><i class="blue"></i>Science R&amp;D</span>
+            <span class="lg"><i class="red"></i>AI / Applied</span>
+            <span class="rf-stat">40+ papers · physics → AI</span>
+          </div>
+          <div class="tip" id="tip"></div>
+        </div>
+        <div class="scrollcue"><span class="ln"></span>Hover the record — real work, real venues</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOOK BAND ===== -->
+<section class="hook" id="hook" style="padding-top:64px;padding-bottom:64px">
+  <div class="wrap">
+    <div class="hook-grid reveal">
+      <div>
+        <div class="lbl">Publications / year</div>
+        <div class="cmp"><span class="from">3</span><span class="arrow">→</span><span class="to blue" data-count="17">0</span></div>
+      </div>
+      <div>
+        <div class="lbl">Patent filings / year</div>
+        <div class="cmp"><span class="from">1</span><span class="arrow">→</span><span class="to red" data-count="7">0</span></div>
+      </div>
+      <div class="statement">
+        <p>The year before I joined vs. 18 months in. Roughly <b>6× the R&amp;D output</b>.</p>
+        <a href="#experience">See how it happened →</a>
       </div>
     </div>
   </div>
@@ -260,15 +372,13 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow">About</span>
-      <h2>From particle tracks to agentic systems</h2>
-    </div>
+    <div class="section-head"><span class="eyebrow">About</span><h2>From particle tracks to agentic systems</h2></div>
     <div class="about-grid">
       <div>
-        <p>I'm an <b>R&amp;D Program Manager</b> and Certified GenAI Leader with 10+ years bridging frontier scientific research and enterprise R&amp;D commercialization — from detector physics at <b>CERN, Fermilab and GSI</b> to leading AI transformation at <b>Kariyer.net</b>.</p>
+        <p>I'm an <b>R&amp;D Program Manager</b> and Certified GenAI Leader with 10+ years bridging frontier scientific research and enterprise R&amp;D commercialization — from detector physics at <b>CERN, Fermilab and GSI</b> to leading AI transformation at <b>Kariyer.net</b>. I'm an author on <b>40+ peer-reviewed papers</b> spanning CMS/LHC, the PANDA detector and Belle II — and, since my M.Sc. on deep learning for supersymmetry, machine learning.</p>
         <p>In 1.5 years I lifted corporate R&amp;D output roughly <b>6×</b> — from 3 publications and 1 patent filing to <b>17 paper submissions</b> and <b>7 patent applications</b> (IEEE, ACM), including a demo selected among only <b>45 worldwide</b> alongside Meta and UC Berkeley. I run TÜBİTAK programs end to end, build university–industry consortiums, and stay hands-on: designing and coding agentic AI, multi-agent and RAG systems in Python and C++.</p>
         <p>I manage the full lifecycle — proposal, budget, timeline, risk, and technical/financial reporting — and I'm comfortable being the public face of corporate R&amp;D at international conferences and consortiums.</p>
+        <a href="#expertise" class="more">What I bring to a program <span class="a">→</span></a>
       </div>
       <div class="specs">
         <div class="spec"><span class="k">Based</span><span class="v">Istanbul, Türkiye</span></div>
@@ -284,173 +394,159 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
 <!-- ===== EXPERTISE ===== -->
 <section id="expertise">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow red">Expertise</span>
-      <h2>Core competencies</h2>
-      <p class="lead">Ordered to how an R&amp;D program is actually run — funding first, delivery last.</p>
-    </div>
+    <div class="section-head"><span class="eyebrow red">Expertise</span><h2>Core competencies</h2>
+      <p class="lead">Ordered to how an R&amp;D program is actually run — funding first, delivery last.</p></div>
     <div class="comp-list">
-      <div class="comp"><div class="num">01</div><div>
-        <h3>R&amp;D Funding &amp; Grants</h3>
+      <div class="comp"><div class="num">01</div><div><h3>R&amp;D Funding &amp; Grants</h3>
         <p>Proposal writing, budgeting, requirement extraction, consortium building, financial &amp; technical reporting.</p>
-        <div class="tags"><span class="tag">TÜBİTAK TEYDEB</span><span class="tag">ARDEB</span><span class="tag">Horizon Europe</span><span class="tag">Eureka</span></div>
-      </div></div>
-      <div class="comp"><div class="num">02</div><div>
-        <h3>Outreach &amp; Communication</h3>
+        <div class="tags"><span class="tag">TÜBİTAK TEYDEB</span><span class="tag">ARDEB</span><span class="tag">Horizon Europe</span><span class="tag">Eureka</span></div></div></div>
+      <div class="comp"><div class="num">02</div><div><h3>Outreach &amp; Communication</h3>
         <p>Conference representation, technical evaluation &amp; mentorship, R&amp;D-culture dissemination, networking, public demos.</p>
-        <div class="tags"><span class="tag">Talks</span><span class="tag">AI Chapter</span><span class="tag">Demos</span><span class="tag">Mentorship</span></div>
-      </div></div>
-      <div class="comp"><div class="num">03</div><div>
-        <h3>Program &amp; Project Management</h3>
+        <div class="tags"><span class="tag">Talks</span><span class="tag">AI Chapter</span><span class="tag">Demos</span><span class="tag">Mentorship</span></div></div></div>
+      <div class="comp"><div class="num">03</div><div><h3>Program &amp; Project Management</h3>
         <p>International project planning, cross-functional coordination, timeline &amp; budget control, risk and stakeholder management.</p>
-        <div class="tags"><span class="tag">Agile / Scrum</span><span class="tag">PSM I</span><span class="tag">PSPO I</span></div>
-      </div></div>
-      <div class="comp"><div class="num">04</div><div>
-        <h3>AI &amp; Engineering</h3>
+        <div class="tags"><span class="tag">Agile / Scrum</span><span class="tag">PSM I</span><span class="tag">PSPO I</span></div></div></div>
+      <div class="comp"><div class="num">04</div><div><h3>AI &amp; Engineering</h3>
         <p>Generative AI &amp; LLM integration, multi-agent systems, RAG, data analytics. Hands-on Python, C++, Bash; FPGA/ASIC heritage.</p>
-        <div class="tags"><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">RAG</span><span class="tag">Python</span></div>
-      </div></div>
-      <div class="comp"><div class="num">05</div><div>
-        <h3>University–Industry Collaboration</h3>
+        <div class="tags"><span class="tag">LLMs</span><span class="tag">Multi-Agent</span><span class="tag">RAG</span><span class="tag">Python</span></div></div></div>
+      <div class="comp"><div class="num">05</div><div><h3>University–Industry Collaboration</h3>
         <p>TÜBİTAK partnerships with Galatasaray, İTÜ, İzmir Ekonomi, Dokuz Eylül &amp; Boğaziçi; paper co-authoring with Stanford faculty.</p>
-        <div class="tags"><span class="tag">Consortiums</span><span class="tag">Co-authoring</span><span class="tag">iLab</span></div>
-      </div></div>
-      <div class="comp"><div class="num">06</div><div>
-        <h3>R&amp;D Governance, IP &amp; Commercialization</h3>
+        <div class="tags"><span class="tag">Consortiums</span><span class="tag">Co-authoring</span><span class="tag">iLab</span></div></div></div>
+      <div class="comp"><div class="num">06</div><div><h3>R&amp;D Governance, IP &amp; Commercialization</h3>
         <p>5746 R&amp;D Center operations, Technopark compliance, patent portfolio expansion, technology transfer, product–market alignment.</p>
-        <div class="tags"><span class="tag">5746 R&amp;D Center</span><span class="tag">Patents</span><span class="tag">Tech Transfer</span></div>
-      </div></div>
+        <div class="tags"><span class="tag">5746 R&amp;D Center</span><span class="tag">Patents</span><span class="tag">Tech Transfer</span></div></div></div>
     </div>
+    <a href="#experience" class="more red">See it in the work <span class="a">→</span></a>
   </div>
 </section>
 
 <!-- ===== EXPERIENCE ===== -->
 <section id="experience">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow">Experience</span>
-      <h2>Trajectory</h2>
-    </div>
+    <div class="section-head"><span class="eyebrow">Experience</span><h2>Trajectory</h2></div>
     <div class="beam">
-      <div class="node">
-        <div class="yr">FEB 2025 — PRESENT</div>
-        <h3>R&amp;D Projects Technical Lead</h3>
+      <div class="node"><div class="yr">FEB 2025 — PRESENT</div><h3>R&amp;D Projects Technical Lead</h3>
         <div class="org">Kariyer.net · Istanbul, Türkiye</div>
         <p>Scaled the corporate R&amp;D pipeline ~6× — from 3 papers and 1 patent the prior year to 17 paper submissions and 7 patent applications (IEEE, ACM). Owned TÜBİTAK 1505/1707 execution and the 1711 application with Galatasaray, İTÜ, İzmir Ekonomi, Dokuz Eylül and Boğaziçi; co-authored with Stanford faculty. Designed and coded LLM, multi-agent and RAG solutions hands-on in VS Code — one demo selected among 45 worldwide, alongside Meta and UC Berkeley. Founded a monthly internal AI Chapter, ran reviews with holding-group R&amp;D directors, and governed the 5746 R&amp;D Center / Technopark across 20+ projects with Product Marketing, DevSecOps and QA.</p>
-        <div class="tags"><span class="tag">Agentic AI</span><span class="tag">TÜBİTAK Grants</span><span class="tag">Patents ×7</span><span class="tag">5746 R&amp;D Center</span><span class="tag">Cross-functional</span></div>
-      </div>
-      <div class="node">
-        <div class="yr">JAN 2024 — DEC 2024</div>
-        <h3>Head of R&amp;D and Project Delivery</h3>
+        <div class="tags"><span class="tag">Agentic AI</span><span class="tag">TÜBİTAK Grants</span><span class="tag">Patents ×7</span><span class="tag">5746 R&amp;D Center</span><span class="tag">Cross-functional</span></div></div>
+      <div class="node"><div class="yr">JAN 2024 — DEC 2024</div><h3>Head of R&amp;D and Project Delivery</h3>
         <div class="org">Thread in Motion · Istanbul, Türkiye</div>
         <p>Led delivery of scalable wearable / IoT solutions for B2B enterprises. Partnered with Sales and Product Marketing on product–market fit and executive reviews; rolled out Agile/Scrum across software, hardware and data teams.</p>
-        <div class="tags"><span class="tag">IoT</span><span class="tag">Delivery</span><span class="tag">Agile</span></div>
-      </div>
-      <div class="node">
-        <div class="yr">OCT 2022 — DEC 2023</div>
-        <h3>R&amp;D Project Coordinator</h3>
+        <div class="tags"><span class="tag">IoT</span><span class="tag">Delivery</span><span class="tag">Agile</span></div></div>
+      <div class="node"><div class="yr">OCT 2022 — DEC 2023</div><h3>R&amp;D Project Coordinator</h3>
         <div class="org">Thread in Motion · Istanbul, Türkiye</div>
         <p>Managed the full technical lifecycle of internal R&amp;D projects with strict alignment to IP and patent-protection pipelines, running customer feedback loops into product roadmaps.</p>
-        <div class="tags"><span class="tag">R&amp;D Coordination</span><span class="tag">IP</span></div>
-      </div>
-      <div class="node">
-        <div class="yr">2018 — 2021</div>
-        <h3>Postdoctoral &amp; Ph.D. Researcher — Physics &amp; Data Analysis</h3>
+        <div class="tags"><span class="tag">R&amp;D Coordination</span><span class="tag">IP</span></div></div>
+      <div class="node"><div class="yr">2018 — 2021</div><h3>Postdoctoral &amp; Ph.D. Researcher — Physics &amp; Data Analysis</h3>
         <div class="org">U. of Hawaiʻi · U. of Giessen · GSI Darmstadt</div>
         <p>PANDA detector R&amp;D — ASIC design, FPGA firmware and fast-readout electronics for the Endcap Disc DIRC at FAIR. Coordinated multi-disciplinary workflows and budgets across cross-continental research consortiums.</p>
-        <div class="tags"><span class="tag">FPGA</span><span class="tag">ASIC</span><span class="tag">Detector R&amp;D</span></div>
-      </div>
-      <div class="node">
-        <div class="yr">2015 — 2018</div>
-        <h3>Research Scholar — AI &amp; Data Analytics</h3>
+        <div class="tags"><span class="tag">FPGA</span><span class="tag">ASIC</span><span class="tag">Detector R&amp;D</span></div></div>
+      <div class="node"><div class="yr">2015 — 2018</div><h3>Research Scholar — AI &amp; Data Analytics</h3>
         <div class="org">CERN · Fermilab · Istanbul Technical University</div>
         <p>High-performance AI/ML particle-physics analysis on distributed/Grid systems and LXPLUS Linux clusters using Python, C++ and Bash, within large international collaborations.</p>
-        <div class="tags"><span class="tag">CERN</span><span class="tag">ML Analysis</span><span class="tag">Grid Computing</span></div>
-      </div>
+        <div class="tags"><span class="tag">CERN</span><span class="tag">ML Analysis</span><span class="tag">Grid Computing</span></div></div>
     </div>
+    <a href="#research" class="more">Read the published work <span class="a">→</span></a>
   </div>
 </section>
 
 <!-- ===== RESEARCH ===== -->
 <section id="research">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow red">Research</span>
-      <h2>Selected publications</h2>
-    </div>
+    <div class="section-head"><span class="eyebrow red">Research</span><h2>Selected work</h2>
+      <p class="lead">40+ papers across physics and AI. My focus now is <b style="color:var(--red)">AI &amp; applied ML</b> — the big-science R&amp;D that built those skills is one click away.</p></div>
 
     <div class="pg">
-      <div class="gh"><h3>AI &amp; Machine Learning</h3><div class="bar"></div></div>
-      <a class="pub" href="https://arxiv.org/abs/2601.22885" target="_blank" rel="noopener">
-        <div class="venue">arXiv:2601.22885 · Jan 2026</div>
-        <h4>Leveraging LLMs for Turkish Skill Extraction</h4>
-        <div class="auth">Kariyer.net R&amp;D Center · Istanbul Technical University</div>
-        <div class="desc">First Turkish skill-extraction dataset (4,819 spans, 327 postings); 0.56 ESCO linking with Claude + GPT-4o reranking in a low-resource setting.</div>
-        <div class="links"><span>arXiv ↗</span></div>
-      </a>
-      <a class="pub" href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener">
-        <div class="venue">arXiv:2604.08290 · Apr 2026</div>
-        <h4>Tokalator: A Context Engineering Toolkit for AI Coding Assistants</h4>
-        <div class="auth">V. Farajijobehdar, <b>İ. Köseoğlu Sarı</b>, N. K. Üre, E. Zeydan</div>
-        <div class="desc">Open-source token-budget toolkit: real-time monitoring, 11 slash commands and a VS Code extension across 17 models / 3 providers.</div>
-        <div class="links"><span>arXiv ↗</span></div>
-      </a>
+      <div class="gh"><h3>AI &amp; Applied Machine Learning</h3><div class="bar"></div></div>
       <a class="pub" href="https://doi.org/10.1145/3786335.3813207" target="_blank" rel="noopener">
         <div class="venue">Proceedings of the ACM · 2026 · selected among 45 demos worldwide (w/ Meta, UC Berkeley)</div>
         <h4>Multi-Agent Position Classification with Tool Orchestration</h4>
-        <div class="auth">V. Farajijobehdar, <b>İ. K. Sarı</b>, N. K. Üre et al.</div>
+        <div class="auth">V. Farajijobehdar, <b>İ. K. Sarı</b>, N. K. Üre, E. Zeydan</div>
         <div class="desc">Cross-lingual normalization of free-form job titles to occupational taxonomies via orchestrated specialized agents.</div>
-        <div class="links"><span>ACM DL ↗</span><a href="https://vimeo.com/1173321359" target="_blank" rel="noopener" onclick="event.stopPropagation()">Demo ↗</a></div>
-      </a>
-    </div>
-
-    <div class="pg">
-      <div class="gh"><h3>AI &amp; Cybersecurity — IEEE ICIN 2026</h3><div class="bar"></div></div>
+        <div class="links"><span>ACM DL ↗</span><a href="https://vimeo.com/1173321359" target="_blank" rel="noopener" onclick="event.stopPropagation()">Demo ↗</a></div></a>
+      <a class="pub" href="https://arxiv.org/abs/2604.08290" target="_blank" rel="noopener">
+        <div class="venue">arXiv:2604.08290 · 2026</div>
+        <h4>Tokalator: A Context Engineering Toolkit for AI Coding Assistants</h4>
+        <div class="auth">V. Farajijobehdar, <b>İ. K. Sarı</b>, N. K. Üre, E. Zeydan</div>
+        <div class="desc">Open-source token-budget toolkit: real-time monitoring, 11 slash commands and a VS Code extension across 17 models / 3 providers.</div>
+        <div class="links"><span>arXiv ↗</span></div></a>
       <a class="pub" href="https://ieeexplore.ieee.org/abstract/document/11481835" target="_blank" rel="noopener">
         <div class="venue">IEEE ICIN 2026</div>
-        <h4>An Interactive Demonstration Platform for AI-Powered Typosquatting Detection &amp; Defense</h4>
-        <div class="auth">D. Kurnaz, <b>İ. K. Sarı</b>, E. Zeydan</div>
-        <div class="desc">TypoGuard — real-time simulation and defense against AI-generated typosquatting / phishing using GPT-4, Claude and Gemini.</div>
-        <div class="links"><span>IEEE Xplore ↗</span><a href="https://youtu.be/2aPT7OmMQdw" target="_blank" rel="noopener" onclick="event.stopPropagation()">Demo ↗</a></div>
-      </a>
-      <a class="pub" href="https://ieeexplore.ieee.org/abstract/document/11481803" target="_blank" rel="noopener">
-        <div class="venue">IEEE ICIN 2026</div>
-        <h4>Multi-Layer Algorithmic Framework with LLM Integration for Typosquatting &amp; Phishing Domain Analysis</h4>
-        <div class="auth">D. Kurnaz, <b>İ. K. Sarı</b>, E. Zeydan</div>
-        <div class="links"><span>IEEE Xplore ↗</span></div>
-      </a>
-    </div>
-
-    <div class="pg">
-      <div class="gh"><h3>Particle Physics — Belle II &amp; PANDA</h3><div class="bar"></div></div>
-      <a class="pub" href="https://arxiv.org/abs/2205.12847" target="_blank" rel="noopener">
-        <div class="venue">Snowmass 2021 · arXiv:2205.12847</div>
-        <h4>Polarization Upgrade and Polarimetry at the SuperKEKB Belle II Facility</h4>
-        <div class="auth">SuperKEKB e⁻ Polarization Working Group · incl. I. Köseoğlu Sarı · U. of Hawaiʻi</div>
-        <div class="links"><span>arXiv ↗</span></div>
-      </a>
+        <h4>TypoGuard — AI-Powered Typosquatting Detection &amp; Defense (+ Multi-Layer LLM Framework)</h4>
+        <div class="auth">D. Kurnaz, <b>İ. K. Sarı</b>, E. Zeydan · two papers</div>
+        <div class="desc">Real-time simulation and defense against AI-generated typosquatting / phishing using GPT-4, Claude and Gemini.</div>
+        <div class="links"><span>IEEE Xplore ↗</span><a href="https://youtu.be/2aPT7OmMQdw" target="_blank" rel="noopener" onclick="event.stopPropagation()">Demo ↗</a></div></a>
       <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
-        <div class="venue">J. Phys.: Conf. Ser. 2374 012010 · 2022</div>
-        <h4>The PANDA EDD Prototype in the Giessen Cosmic Station</h4>
-        <div class="auth"><b>İlknur Köseoğlu</b> · GSI Helmholtz Centre / U. of Giessen</div>
-        <div class="links"><span>InspireHEP ↗</span></div>
-      </a>
+        <div class="venue">IEEE · 2023 · Thread in Motion (industry)</div>
+        <h4>Fall Detection &amp; Efficiency Enhancement via Wearable Technology</h4>
+        <div class="auth">A. E. Işık, <b>İ. Köseoğlu</b>, R. Öner</div>
+        <div class="desc">Applied ML on wearable sensor streams — plus manufacturing fault detection from audio signals (2023).</div>
+        <div class="links"><span>IEEE ↗</span></div></a>
+      <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
+        <div class="venue">M.Sc. Thesis · Istanbul Technical University · 2016</div>
+        <h4>Investigating Supersymmetry with Deep-Learning Methods</h4>
+        <div class="auth"><b>İ. Köseoğlu</b> · where the AI thread began</div>
+        <div class="desc">Deep neural networks on physics data a decade before "GenAI" — the start of a continuous ML track that runs through to today's agentic systems.</div>
+        <div class="links"><span>Details ↗</span></div></a>
     </div>
 
+    <details class="foundations">
+      <summary>
+        <span class="fsum">
+          <span class="ftitle">Foundations — Big-Science R&amp;D, Data &amp; Instrumentation</span>
+          <span class="fmeta">CMS/LHC · PANDA detectors · Belle II. The same work, at research scale: large-data ML, real-time systems, FPGA/ASIC hardware, and coordinating 3,000-person international programs. Click to expand.</span>
+        </span>
+        <span class="fchev">▸</span>
+      </summary>
+      <div class="fbody">
+        <div class="pg">
+          <div class="gh"><h3>Detector &amp; Systems R&amp;D — One of the First Authors (PANDA at FAIR)</h3><div class="bar"></div></div>
+          <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
+            <div class="venue">Int. J. Modern Physics A · 2020</div>
+            <h4>Design of the Barrel &amp; Endcap DIRC Detectors for PANDA</h4>
+            <div class="auth"><b>İ. Köseoğlu</b>, PANDA Cherenkov Group</div>
+            <div class="desc">Led detector hardware &amp; readout-system design — sensor selection, FPGA/ASIC firmware, real-time DAQ and prototyping. Hardware–software co-design and R&amp;D engineering, not just analysis. (Also: Endcap Disc DIRC status, JINST 2020; EDD prototype, 2022.)</div>
+            <div class="links"><span>InspireHEP ↗</span></div></a>
+          <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
+            <div class="venue">Ph.D. Thesis · U. Giessen · 2021</div>
+            <h4>Fast Readout System for the PANDA Disc DIRC</h4>
+            <div class="auth"><b>İ. Köseoğlu-Sarı</b></div>
+            <div class="desc">Built an FPGA-based fast-readout and data-acquisition system end to end — the embedded-systems, signal-processing and real-time-data engineering that underpins modern ML pipelines.</div>
+            <div class="links"><span>InspireHEP ↗</span></div></a>
+        </div>
+        <div class="pg">
+          <div class="gh"><h3>Large-Scale Data &amp; International Programs — CMS · Belle II · PANDA</h3><div class="bar"></div></div>
+          <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
+            <div class="venue">JINST · 2018 · CMS Collaboration</div>
+            <h4>Identification of Heavy-Flavour Jets with the CMS Detector</h4>
+            <div class="auth">CMS Collaboration · co-author <span style="color:var(--red)">· flagship LHC result</span></div>
+            <div class="desc">Petabyte-scale data analysis and ML-based event classification on distributed/Grid computing — data science at the largest scale in science.</div>
+            <div class="links"><span>InspireHEP ↗</span></div></a>
+          <a class="pub" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">
+            <div class="venue">Phys. Lett. B · 2018 · CMS Collaboration</div>
+            <h4>Evidence for the Higgs Boson Decay to a Bottom Quark Pair</h4>
+            <div class="auth">CMS Collaboration · co-author <span style="color:var(--red)">· flagship Higgs result</span></div>
+            <div class="desc">Statistical / ML analysis delivered within a 3,000-scientist international program under strict peer review.</div>
+            <div class="links"><span>InspireHEP ↗</span></div></a>
+          <a class="pub" href="https://arxiv.org/abs/2205.12847" target="_blank" rel="noopener">
+            <div class="venue">Eur. Phys. J. A · 2021 (PANDA) &nbsp;|&nbsp; Snowmass (Belle II)</div>
+            <h4>PANDA Phase One &nbsp;·&nbsp; Polarimetry at SuperKEKB Belle II</h4>
+            <div class="auth">PANDA Collaboration · SuperKEKB Polarization WG</div>
+            <div class="desc">Multi-institution R&amp;D program planning and instrumentation — the research analogue of coordinating enterprise R&amp;D.</div>
+            <div class="links"><span>arXiv ↗</span></div></a>
+        </div>
+      </div>
+    </details>
     <p class="viewall">// Full record:
       <a href="https://scholar.google.com/citations?user=WElH4xgAAAAJ&hl=tr&oi=sra" target="_blank" rel="noopener">Google Scholar</a> ·
-      <a href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">InspireHEP</a>
-    </p>
+      <a href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">InspireHEP</a></p>
   </div>
 </section>
 
 <!-- ===== EDUCATION ===== -->
 <section id="education">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow">Education</span>
-      <h2>Degrees &amp; certifications</h2>
-    </div>
+    <div class="section-head"><span class="eyebrow">Education</span><h2>Degrees &amp; certifications</h2></div>
     <div class="edu-grid">
       <div>
         <div class="degree"><div><h3>Ph.D. in Physics</h3><div class="inst">Justus Liebig University Giessen, Germany</div></div><div class="yr">2018–2021</div></div>
@@ -468,19 +564,23 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
+<!-- ===== CONTACT (FINAL CTA) ===== -->
 <section id="contact">
   <div class="wrap reveal">
-    <div class="section-head">
-      <span class="eyebrow red">Contact</span>
-      <h2>Let's build something</h2>
-      <p class="lead">Open to R&amp;D program roles, funded-research collaborations, technical advisory and speaking. Based in Istanbul — working globally.</p>
-    </div>
-    <div class="clinks">
-      <a class="clink" href="mailto:ilkoseoglu@gmail.com"><span class="ck">Email</span><span class="cv">ilkoseoglu@gmail.com</span></a>
-      <a class="clink" href="https://www.linkedin.com/in/dr-ilknur-koseoglu-sari" target="_blank" rel="noopener"><span class="ck">LinkedIn</span><span class="cv">dr-ilknur-koseoglu-sari</span></a>
-      <a class="clink" href="https://scholar.google.com/citations?user=WElH4xgAAAAJ&hl=tr&oi=sra" target="_blank" rel="noopener"><span class="ck">Google Scholar</span><span class="cv">Publications &amp; citations</span></a>
-      <a class="clink" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener"><span class="ck">InspireHEP</span><span class="cv">Physics record</span></a>
+    <div class="contact-card">
+      <span class="eyebrow red" style="justify-content:center">Contact</span>
+      <h2 style="margin-top:16px">Let's turn research into results.</h2>
+      <p class="lead">Open to research collaborations, technical advisory and speaking. Based in Istanbul — working globally.</p>
+      <div class="contact-actions">
+        <a href="mailto:ilkoseoglu@gmail.com" class="btn primary">Email me →</a>
+        <a href="ilknur-koseoglu-sari-cv.pdf" class="btn ghost" download>Download CV ↓</a>
+      </div>
+      <div class="clinks">
+        <a class="clink" href="https://www.linkedin.com/in/dr-ilknur-koseoglu-sari" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="clink" href="https://scholar.google.com/citations?user=WElH4xgAAAAJ&hl=tr&oi=sra" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a class="clink" href="https://inspirehep.net/authors/2052094" target="_blank" rel="noopener">InspireHEP ↗</a>
+        <a class="clink" href="mailto:ilkoseoglu@gmail.com">ilkoseoglu@gmail.com</a>
+      </div>
     </div>
   </div>
 </section>
@@ -490,25 +590,79 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--faint);font-s
   <span>Istanbul, Türkiye · R&amp;D Program Manager</span>
 </div></footer>
 
+<!-- floating CTA -->
+<div class="floatcta" id="floatcta">
+  <a href="#contact" class="fbtn">Let's talk →</a>
+  <a href="ilknur-koseoglu-sari-cv.pdf" class="fbtn alt" download>CV</a>
+</div>
+
 <script>
 (function(){
   var burger=document.getElementById('burger'), links=document.getElementById('navlinks');
   burger.addEventListener('click',function(){links.classList.toggle('open');});
   links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});
   document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // scroll progress
+  var prog=document.getElementById('progress');
+  function onScroll(){
+    var h=document.documentElement, sc=h.scrollTop||document.body.scrollTop;
+    var max=(h.scrollHeight-h.clientHeight)||1;
+    prog.style.width=(sc/max*100)+'%';
+    // floating CTA: show after hero, hide over footer/contact
+    var y=window.scrollY, vh=window.innerHeight;
+    var contact=document.getElementById('contact');
+    var overContact = contact && contact.getBoundingClientRect().top < vh*0.85;
+    document.getElementById('floatcta').classList.toggle('show', y>vh*0.9 && !overContact);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // reveal
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  var navA=[].slice.call(links.querySelectorAll('a'));
+
+  // active nav
+  var navA=[].slice.call(links.querySelectorAll('a')).filter(function(a){return a.getAttribute('href').indexOf('#')===0;});
   var secs=navA.map(function(a){return document.querySelector(a.getAttribute('href'));});
   var spy=new IntersectionObserver(function(es){es.forEach(function(e){
     if(e.isIntersecting){var id='#'+e.target.id;navA.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}});},
     {rootMargin:'-45% 0px -50% 0px'});
   secs.forEach(function(s){if(s)spy.observe(s);});
-  // hero trace draw-in
-  document.querySelectorAll('.trace').forEach(function(p){
-    try{var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
-      p.getBoundingClientRect();p.style.transition='stroke-dashoffset 1.3s ease .15s';p.style.strokeDashoffset=0;}catch(e){}
-  });
+
+  // publication record tooltips
+  (function(){
+    var rec=document.getElementById('record'), tip=document.getElementById('tip');
+    if(!rec||!tip) return;
+    rec.querySelectorAll('.dot').forEach(function(d){
+      function show(){
+        tip.innerHTML='<div>'+d.getAttribute('data-t')+'</div><div class="tv">'+d.getAttribute('data-v')+'</div>';
+        tip.classList.add('show');
+        var r=d.getBoundingClientRect(), rr=rec.getBoundingClientRect();
+        var x=r.left-rr.left+r.width/2, y=r.top-rr.top;
+        tip.style.left='0';tip.style.top='0';
+        var tw=tip.offsetWidth, th=tip.offsetHeight;
+        var lx=Math.max(6,Math.min(x-tw/2, rec.offsetWidth-tw-6));
+        tip.style.left=lx+'px'; tip.style.top=(y-th-10)+'px';
+      }
+      function hide(){tip.classList.remove('show');}
+      d.addEventListener('mouseenter',show);
+      d.addEventListener('mouseleave',hide);
+      d.addEventListener('click',function(e){e.preventDefault();show();setTimeout(hide,2200);});
+      d.setAttribute('tabindex','0');
+      d.addEventListener('focus',show); d.addEventListener('blur',hide);
+    });
+  })();
+
+  // count-up on hook band
+  var counted=false;
+  var hookIO=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting && !counted){counted=true;
+      document.querySelectorAll('[data-count]').forEach(function(el){
+        var target=+el.getAttribute('data-count'),cur=0,step=Math.max(1,Math.round(target/28));
+        var t=setInterval(function(){cur+=step;if(cur>=target){cur=target;clearInterval(t);}el.textContent=cur;},34);
+      });
+    }});},{threshold:.4});
+  var hb=document.querySelector('.hook-grid'); if(hb)hookIO.observe(hb);
 })();
 </script>
 </body>
